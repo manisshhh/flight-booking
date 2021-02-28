@@ -1,0 +1,16 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeftPlane {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}

@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../../../assets/fonts/Nunito/Nunito-Light.ttf");
+}
+
+* {
+  font-family: "Nunito";
+  /* box-sizing: border-box; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.loginCard {
+  width: 50%;
+}
+
+.headingWrapper {
+  text-align: center;
+}
+
+.form_section input {
+  /* border: 0.5px solid #d4d4d4; */
+  box-shadow: 0px 0px 5px 5px rgba(206, 212, 218, 0.075) !important;
+}
+
+.logoWrapper p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logoWrapper {
+  padding-left: 95px;
+}
+.maintitle {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.maintitle img {
+  animation: 1s ease-out 0s 1 slideInFromLeftPlane;
+  position: absolute;
+  top: -38%;
+}
+
+.maintitle p {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
+  padding: 10px 50px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.form_button {
+  margin-top: 15px;
+  padding: 5px 30px;
+}
+
+.contentSection {
+  padding: 10px 32px;
+}
+
+.loginButton {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  padding: 5px 52px;
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: rgb(78 54 118 / 65%);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.035) !important;
+}
+
+.loginButton:hover {
+  color: #ffffff;
+}
+.loginButton:focus {
+  outline: none;
+}
+
+.input {
+  padding: 10px 0px;
+  padding-left: 6%;
+  border-radius: 7px;
+  margin: 10px 0px;
+  width: 94%;
+  border: none;
+  box-shadow: 0 0 0 0.22rem rgb(213 216 220 / 20%);
+  color: #000000;
+}
+
+.input:focus {
+  color: #212529;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: 0 0 16px 0rem rgb(104 75 141 / 28%);
+}
+
+.loginContainer {
+  padding: 180px 50px 80px 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.loginContent {
+  margin: 0px 122px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 0;
+  box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* media queryies for small devices */
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .icon {
+    display: block !important;
+    margin-right: 20px;
+  }
+  .logoWrapper {
+    padding-left: 20px !important;
+  }
+  .homeContainner {
+    min-height: 202px;
+    height: 100%;
+    padding-bottom: 157px;
+  }
+  .loginContainer {
+    padding: 65px 40px !important;
+    flex-direction: column !important;
+  }
+  .maintitle p {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 10px 30px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .maintitle {
+    width: 100%;
+  }
+  .loginCard {
+    width: 100%;
+  }
+  .loginContent {
+    margin: 0px 10px;
+  }
+  .navItems {
+    display: none;
+    position: absolute;
+    background: #fff;
+
+    top: 97%;
+    right: 0;
+    height: 177px;
+    width: 100px;
+    padding-right: 0px;
+  }
+  .navItems li a {
+    color: #000;
+  }
+  .navItems li:hover a {
+    background-color: #8cda3f;
+    color: #fff;
+  }
+  .navItems li {
+    padding: 5px;
+    padding-right: 20px;
+    display: list-item !important;
+  }
+}
+@media (min-width: 400px) and (max-width: 640px) {
+  .icon {
+    display: block !important;
+    margin-right: 20px;
+  }
+  .logoWrapper {
+    padding-left: 20px !important;
+  }
+  .homeContainner {
+    min-height: 202px;
+    height: 100%;
+    padding-bottom: 157px;
+  }
+  .loginContainer {
+    padding: 65px 40px !important;
+    flex-direction: column !important;
+  }
+  .maintitle p {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 10px 30px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .maintitle {
+    width: 100%;
+  }
+  .loginCard {
+    width: 100%;
+  }
+  .loginContent {
+    margin: 0px 10px;
+  }
+  .navItems {
+    display: none;
+    position: absolute;
+    background: #fff;
+
+    top: 97%;
+    right: 0;
+    height: 177px;
+    width: 100px;
+    padding-right: 0px;
+  }
+  .navItems li a {
+    color: #000;
+  }
+  .navItems li:hover a {
+    background-color: #8cda3f;
+    color: #fff;
+  }
+  .navItems li {
+    padding: 5px;
+    padding-right: 20px;
+    display: list-item !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .icon {
+    display: block !important;
+    margin-right: 20px;
+  }
+  .logoWrapper {
+    padding-left: 20px !important;
+  }
+  .homeContainner {
+    min-height: 202px;
+    height: 100%;
+    padding-bottom: 157px;
+  }
+  .loginContainer {
+    padding: 65px 40px !important;
+    flex-direction: column !important;
+  }
+  .maintitle p {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 10px 30px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .maintitle {
+    width: 100%;
+  }
+  .loginCard {
+    width: 100%;
+  }
+  .loginContent {
+    margin: 0px 10px;
+  }
+  .navItems {
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 97%;
+    right: 0;
+    height: 177px;
+    width: 100px;
+    padding-right: 0px;
+  }
+  .navItems li a {
+    color: #000;
+  }
+  .navItems li:hover a {
+    background-color: #8cda3f;
+    color: #fff;
+  }
+  .navItems li {
+    padding: 5px;
+    padding-right: 20px;
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+  .icon {
+    display: block !important;
+    margin-right: 20px;
+  }
+  .logoWrapper {
+    padding-left: 20px !important;
+  }
+  .homeContainner {
+    min-height: 202px;
+    height: 100%;
+    padding-bottom: 157px;
+  }
+  .loginContainer {
+    padding: 65px 40px !important;
+    flex-direction: column !important;
+  }
+  .maintitle p {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 10px 30px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .maintitle {
+    width: 100%;
+  }
+  .loginCard {
+    width: 100%;
+  }
+  .loginContent {
+    margin: 0px 10px;
+  }
+  .navItems {
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 97%;
+    right: 0;
+    height: 177px;
+    width: 100px;
+    padding-right: 0px;
+  }
+  .navItems li a {
+    color: #000;
+  }
+  .navItems li:hover a {
+    background-color: #8cda3f;
+    color: #fff;
+  }
+  .navItems li {
+    padding: 5px;
+    padding-right: 20px;
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+}
+
+@media (min-width: 1025px) {
+}
+
+.logo {
+  width: 70px;
+  border-radius: 50%;
+  margin: 11px 0px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeftPlane {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
