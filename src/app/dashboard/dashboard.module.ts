@@ -1,14 +1,16 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { DashboardLayoutComponent } from "../layouts/dashboard-layout/dashboard-layout.component";
+import { SharedModule } from "../shared/shared.module";
 import { DashboardRoutingModule } from "./dashoad-routing.module";
 import { SearchFlightComponent } from "./search-flight/search-flight.component";
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [SearchFlightComponent,DashboardComponent],
+  declarations: [SearchFlightComponent,DashboardLayoutComponent, SidebarComponent],
   imports: [
-    BrowserModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ],
   providers: [],
   exports:[]
