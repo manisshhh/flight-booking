@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/authGuards/auth.guard';
 import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
 
 const routes: Routes = [
-  {
-    path:"**",
-    redirectTo:"login"
-
-  },
+ 
   {
     path:"login",
     component:CommonLayoutComponent,
@@ -15,7 +12,12 @@ const routes: Routes = [
   },
   {
     path:"dashboard",
+    canActivate: [AuthGuard],
     loadChildren: () => import("./dashboard/dashboard.module").then(dash => dash.DashboardModule)
+  },
+  {
+    path:"**",
+    redirectTo:"login"
   }
 ];
 

@@ -1,0 +1,153 @@
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background: transparent;
+    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
+  
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a.active {
+    background-color: rgb(78 54 118 / 65%);
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(78 54 118 / 65%);
+    color: white;
+  }
+  
+  .content {
+    margin-top: 112px;
+    padding: 20px;
+    width: 80%;
+    position: absolute;
+    margin-left: 20%;
+  }
+  
+  .dataSection {
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: #fff;
+  }
+  
+  /* search section css */
+  
+//   .searchCards {
+//     padding-left: 0px;
+//     padding-right: 0px;
+//   }
+//   .searchCards .card{
+//     height: 100%;
+//     border-radius: 0;
+//     cursor: pointer;
+//     position: relative;
+//   } 
+//   .searchCards .first{
+//     border-top-left-radius:10px;
+//     border-bottom-left-radius:10px; 
+//   } 
+//   .searchCards .last{
+//     border-top-right-radius:10px;
+//     border-bottom-right-radius:10px; 
+//   } 
+  
+//   .searchCards .card .card-body{
+//     padding: 10px 19px;
+//   }
+//   .searchCards .card:hover{
+//     background-color: #eaf5ff;
+//   }
+//   .tabButtons{
+//     margin: 0px;
+//     padding: 0;
+//   }
+//   .tabButtons li{
+//     font-weight: 700;
+//     line-height: 12px;
+//     font-size: 12px;
+//      display: inline;
+//      list-style: none;
+//       border-radius: 4px;
+//       box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%);
+//       background-color: #ffffff;
+//       padding: 10px;
+//       text-transform: uppercase;
+//       margin-right: 10px;
+//       cursor: pointer;
+//   }
+  
+//   .searchButton{
+//     width: 216px;
+//       padding: 10px;
+//       opacity: 1;
+//       color: #fff;
+//       font-size: 24px;
+//       line-height: 24px;
+//       font-weight: 700;
+//       position: absolute;
+//       box-shadow: 0 1px 7px 0 rgb(0 0 0 / 20%);
+//       display: inline-block;
+//       background-image: linear-gradient( 
+//   96deg
+//    ,#53b2fe,#065af3);
+//       text-transform: uppercase;
+//       outline: 0;
+//       border: 0;
+//       text-align: center;
+//       border-radius: 34px;
+//       bottom: -18px;
+//       right: 43%;
+//   }
+  
+//   .tabButtons li:hover{
+//     background: #008cff;
+//     color: #fff;
+//   }
+//   .tabButtons li.active{
+//     background: #008cff;
+//     color: #fff;
+//   }
+//   .arrowrightleft{
+//     top: 61px;
+//       position: absolute;
+//       right: -20px;
+//     width: 40px;
+//       height: 40px;
+//       flex-shrink: 0;
+//       margin-left: -22px;
+//       border-radius: 100%;
+//       background: #fff;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;  
+//       box-shadow: 0 1px 30px 0 rgb(0 0 0 / 10%);
+//       z-index: 1;
+//       cursor: pointer;
+//   }
+//   .mainCard {
+//     padding: 59px 20px 20px 20px;
+//     position: relative;
+//   }
+  
+//   .upperTabs {
+//     position: absolute;
+//     min-width: 84%;
+//     top: -18px;
+//     left: 7%;
+//     box-shadow: 0 1px 7px 0 rgb(0 0 0 / 40%);
+//   }
+  

@@ -14,12 +14,12 @@
     </div>
 
     <div class="contentSection">
-      <form>
-    <input required class="input" type="email" name="email" placeholder="E-mail"><br>
-    <input required class="input"  type="password" name="password" placeholder="Password"><br>
+      <form #loginForm="ngForm" (ngSubmit)="login()">
+        <input required class="input" [(ngModel)]="loginModel.email" type="email" name="email" placeholder="E-mail"><br>
+        <input required class="input" [(ngModel)]="loginModel.password"  type="password" name="password" placeholder="Password"><br>
 
-    <button type="submit" class="btn loginButton">Login</button>
-    </form>
+        <button type="submit" class="btn loginButton">Login</button>
+      </form>
     </div>
   </div>
   </div>

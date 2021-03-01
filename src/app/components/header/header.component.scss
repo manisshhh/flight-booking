@@ -26,12 +26,24 @@ nav.mainHeader ul li {
   margin: 0px 10px;
 }
 
+
 nav.mainHeader ul li:hover a {
-  color: #8cda3f;
+  color:#fff;
+  outline: none;
+
+}
+nav.mainHeader ul li:hover {
+  background: rgb(86 86 86 / 22%);
+  border-radius: 5px;
 }
 
 nav.mainHeader ul li a:focus {
-  color: #8cda3f;
+  color:#fff;
+  outline: none;
+}
+nav.mainHeader ul li a:focus li{
+  background: rgb(86 86 86 / 22%);
+  border-radius: 5px;
 }
 
 .logo {
