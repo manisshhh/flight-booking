@@ -1,0 +1,35 @@
+.btn {
+  margin: 5px;
+}
+
+.form-control {
+  margin: 23px 0px;
+  /* border: 1px solid #ce2b67; */
+  padding: 12px 9px;
+  box-shadow: 0px 0px 4px 3px #ececec;
+}
+
+.bookingForm {
+  padding: 49px 37px;
+  margin: 25px;
+  // box-shadow: 0px 0px 14px 0px #d8d8d8;
+  border-radius: 5px;
+}
+
+.bookButton {
+  background: #ce2b67;
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 9px 0px #827b7b;
+}
+
+.searchBtn {
+  position: absolute;
+  background: #ce2b67;
+  bottom: -20px;
+  color: #fff;
+  left: 47%;
+  padding: 10px 32px;
+  border-radius: 25px;
+}

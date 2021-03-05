@@ -1,0 +1,174 @@
+div.mainBox {
+  margin: 100px 0 0 0;
+  position: relative;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+  padding: 50px 20px;
+}
+// div.mainBox>*{
+//     padding: 0;
+// }
+.cardSection {
+  margin: 20px 0px;
+}
+.cardSection .first {
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.cardSection .last {
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.cardSection > * {
+  padding: 0;
+}
+.cardSection .mainCard {
+  cursor: pointer;
+  border-radius: 0%;
+  padding: 10px 20px;
+  min-height: 175px;
+  transition: all 0.2s linear;
+}
+.cardSection .mainCard:hover {
+  background-color: #eaf5ff;
+}
+
+.upperFilters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.upperFilters > * {
+  padding: 0px;
+  margin: 0px;
+}
+.innerCol {
+  padding: 0px;
+  margin: 0px;
+}
+.upperFilters ul li {
+  display: inline;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0px 6px;
+  border-radius: 20px;
+  font-weight: 900;
+  // color: #e4e4e4;
+}
+
+.tabsCircle {
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  border: solid 1px #9b9b9b;
+}
+
+.swipCircle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  background: #fff;
+  position: absolute;
+  right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 30px 0 rgb(0 0 0 / 10%);
+  z-index: 1;
+  cursor: pointer;
+  top: 36%;
+}
+
+.suggestionPopUp {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 95%;
+  left: 0;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: all 0.2s linear;
+}
+.suggestionPopUp ul {
+  padding: 0;
+}
+
+.displayShow {
+  display: block;
+}
+.suggestionPopUp ul li {
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.suggestionPopUp ul li:hover {
+  background-color: #eaf5ff;
+}
+
+.suggestionPopUp .searchInput {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+  padding: 11px 10px 11px 30px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.suggestionPopUp .searchInput2 {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+  padding: 11px 10px 11px 30px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.searchBtn {
+  position: absolute;
+  background: #ce2b67;
+  bottom: -20px;
+  color: #fff;
+  left: 47%;
+  padding: 10px 32px;
+  border-radius: 25px;
+}
+
+.arln-logo,
+.multiairline {
+  width: 32px;
+  height: 32px;
+  display: block;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bookBtn {
+  color: white;
+  background: #ce2b67;
+}
+.dateInput {
+  border: 0;
+  outline: 0;
+  background: none;
+  min-width: 140px;
+  max-height: 36px;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}

@@ -4,7 +4,7 @@ import { AuthGuard } from './auth/authGuards/auth.guard';
 import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
 
 const routes: Routes = [
- 
+
   {
     path:"login",
     component:CommonLayoutComponent,
@@ -22,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

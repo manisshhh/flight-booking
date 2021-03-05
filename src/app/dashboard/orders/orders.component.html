@@ -1,0 +1,30 @@
+<div class="card orderTable">
+ <table class="card-body table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Address</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let customer of orderList">
+        <td>{{customer.name}}</td>
+        <td>{{customer.gender}}</td>
+        <th scope="row">{{customer.id}}</th>
+        <td>{{customer.address}}</td>
+        <th scope="row">{{customer.from_city}}</th>
+        <th scope="row">{{customer.to_city}}</th>
+        <td>
+          <!-- <button class="btn btn-primary" (click)="edit(customer._id)" >Edit</button> -->
+          <button class="btn btn-warning" (click)="deleteCustomer(customer._id)">Cancel Ticket</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

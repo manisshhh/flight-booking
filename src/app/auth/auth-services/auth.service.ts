@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { of } from "rxjs";
+import { environment } from "src/environments/environment";
 import { Login } from "./login.model";
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Login } from "./login.model";
 })
 
 export class AuthService{
-   private isloggedIn:boolean = false;
+   public isloggedIn:boolean = false;
+   private apiUrl  = environment.api
 
    constructor(private http: HttpClient){
        if(localStorage.getItem('token')){
@@ -16,12 +18,13 @@ export class AuthService{
        }
     }
 
-   login(params: Login) {
-       localStorage.setItem("token",'1234abcd');
-       this.isloggedIn = true;
-       return of({status: "success"})
+   login(params: Login): any {
+
+     return this.http.post(`${this.apiUrl}login`,params)
+
+
    }
-   
+
 
    isAuthenticated() {
        return this.isloggedIn

@@ -1,1 +1,151 @@
-<p>search-flight works!</p>
+<div class="container">
+  <div *ngIf="!isSearch" class=" mainBox">
+      <div class="upperFilters">
+          <ul class="upperFiltersButtons">
+              <li  class="selected"><span class="tabsCircle appendRight5"></span>OneWay</li>
+              <li class=""><span class="tabsCircle appendRight5"></span>Round Trip</li>
+              <li class=""><span class="tabsCircle appendRight5"></span>Multi City</li>
+          </ul>
+          <h6>Book Domestic and International flights</h6>
+      </div>
+      <div class="row cardSection">
+          <div class="col-sm-3 col-md-3">
+              <div (click)="onFromClick($event)" class="first card mainCard">
+                <span class="swipCircle"></span>
+                <div class="card-body cardData">
+                  <h5 class="card-title">From</h5>
+                  <h3 class="card-text">{{selectedFromCity?.city_name}}</h3>
+                  <p class="card-text"><small>{{selectedFromCity?.IATA_code}}, {{selectedFromCity?.airport_name}}</small></p>
+
+                </div>
+                <div [ngClass]="{'displayShow':suggestionList}" class="card suggestionPopUp">
+                    <input id="searchInput" class="searchInput" [formControl]="search_word" type="text" placeholder="search here">
+                    <ul *ngFor="let city of result_list">
+                      <li (click)="onCityClick(city, 'From')">{{city.city_name}}</li>
+                    </ul>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+              <div (click)="onToClick($event)" class="card mainCard">
+                  <div class="card-body cardData">
+                      <h5 class="card-title">To</h5>
+                      <h3 class="card-text">{{selectedToCity?.city_name}}</h3>
+                      <p class="card-text"><small>{{selectedToCity?.IATA_code}}, {{selectedToCity?.airport_name}}</small></p>
+
+                    </div>
+                    <div [ngClass]="{'displayShow':suggestionToList}" class="card suggestionPopUp">
+                      <input id="searchInput2" class="searchInput2" [formControl]="search_word" type="text" placeholder="search here">
+                      <ul *ngFor="let city of result_list">
+                        <li (click)="onCityClick(city, 'To')">{{city.city_name}}</li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 innerCol" >
+                  <div class="card mainCard"  >
+                <div class="card-body cardData">
+                  <h5 class="card-title">Depart</h5>
+                  <input class="dateInput" type="text" [matDatepicker]="picker" matInput [formControl]="selectedDate" readonly />
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <!-- <h3 class="card-text">{{selectedDate.value | date}}</h3> -->
+                  <!-- <p class="card-text"><small>March,2021</small></p> -->
+                </div>
+              </div>
+            </div>
+                <div class="col-md-6 col-sm-6 innerCol" >
+                  <div class="card mainCard">
+                    <div class="card-body cardData">
+                      <h5 class="card-title">Return</h5>
+                      <!-- <p class="card-text">Delhi</p>
+                      <p class="card-text"><small>Delhi</small></p> -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-3">
+              <div class="card mainCard last">
+                <div class="card-body cardData">
+                  <h5 class="card-title">PASSENGERS & CLASS</h5>
+                  <h3 class="card-text">1 Adult , Economy</h3>
+                  <p class="card-text"><small>Delhi</small></p>
+
+                </div>
+              </div>
+            </div>
+      </div>
+
+      <button (click)="onSearch()" class="btn searchBtn">Search</button>
+    </div>
+
+    <div *ngIf="isSearch" class=" mainBox">
+
+      <button class="btn searchBtn" (click)="backToSearch()"  >Back To Search</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Airlines:</th>
+          <th scope="col">Departure</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Arrival</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <span class="arln-logo logo1" style="background-image: url(&quot;https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/I5.png?v=5&quot;);"></span>
+          </th>
+          <td>12 : 30 {{selectedFromCity?.city_name}}</td>
+          <td>2 hours</td>
+          <td>02:15 {{selectedToCity?.city_name}} </td>
+          <td>6,000 INR</td>
+          <td>
+            <button [routerLink]="['/dashboard/ticket-booking',1]" routerLinkActive="router-link-active"  class="btn bookBtn">
+              Book Now
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <span class="arln-logo logo1" style="background-image: url(&quot;https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/6E.png?v=5&quot;);"></span>
+          </th>
+          <td>03 : 30 {{selectedFromCity?.city_name}}</td>
+          <td>2 hours</td>
+          <td>05:15 {{selectedToCity?.city_name}}</td>
+          <td>3,000 INR</td>
+          <td>
+            <button [routerLink]="['/dashboard/ticket-booking',2]" routerLinkActive="router-link-active" class="btn bookBtn">
+              Book Now
+            </button>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">
+            <span class="arln-logo logo1" style="background-image: url(&quot;https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/AI.png?v=5&quot;);"></span>
+          </th>
+          <td>05 : 30 {{selectedFromCity?.city_name}}</td>
+          <td>2 hours</td>
+          <td>07:15 {{selectedToCity?.city_name}}</td>
+          <td>4,000 INR</td>
+          <td>
+            <button [routerLink]="['/dashboard/ticket-booking',3]" routerLinkActive="router-link-active" class="btn bookBtn">
+              Book Now
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+</div>
